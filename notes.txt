@@ -1,0 +1,134 @@
+# heading 1
+## heading 2
+
+writing paragraph
+
+adding link [Hamza](https://www.google.com)
+
+adding image ![alt text e.g(not found)](https://www.google.com/image1.jpg)
+
+this is the way to write code
+
+```
+var a=10;
+```
+this is the list
+* item1
+* item 2
+
+numberd list
+
+1. item1
+2. item2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1. types
+
+type User{
+#   5 basic types adding ! means this field is non-nulable.
+  id:ID!
+  name:String!
+  age:Int!
+  height:Float!
+  isMarried:Boolean
+#   object type
+  accountDetails:UserAccount
+#  list or array type (bellow indicating the friends object with same user obj attributes)
+  friends:[User]
+#   enums
+  Roles:Roles!
+}
+
+type UserAccount{
+  cardNo:ID
+  cardExpire:String
+}
+
+enum Roles{
+  ADMIN
+  USER
+  MANAGER
+}
+
+# 2. interface types
+interface commonTypes {
+  id: ID
+  brand: String
+  model: String
+}
+
+type Car implements commonTypes{
+    id: ID
+  brand: String
+  model: String
+  year: Int
+}
+
+input UserInput{
+  id:ID!
+  name:String
+}
+# 3. Query
+type Query{
+  users:User
+#   query to specific user (find user by id)
+  user(input:UserInput):User
+}
+
+
+
+Quering for db
+
+# quering
+{
+  country(code:"US"){
+    name
+    code phone capital
+    languages{
+      code
+    }
+    continent{
+      code
+      name
+      countries{
+        name
+      }
+    }
+  }
+}
+

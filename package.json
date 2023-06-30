@@ -1,0 +1,26 @@
+{
+  "name": "gql",
+  "version": "1.0.0",
+  "description": "learning GQL.",
+  "repository": {
+    "url": ""
+  },
+  "main": "index.js",
+  "author": "Hamza Qureshi",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
